@@ -7,49 +7,72 @@
     android:background="@drawable/white_background"
     tools:context=".company_details">
 
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="472dp"
+        android:text="Experience Certificate"
+        android:textColor="#9C27B0"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/experience"
+        android:layout_width="63dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="339dp"
+        android:layout_marginTop="464dp"
+        android:background="@android:drawable/ic_menu_send"
+        android:text="Here"
+        android:textColor="#9C27B0"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout7"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="281dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="300dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView54"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="139dp"
+            android:layout_marginTop="79dp"
             android:text="1 Year "
             android:textColor="#000000"
-            app:layout_constraintStart_toEndOf="@+id/textView53"
-            app:layout_constraintTop_toBottomOf="@+id/textView52" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView53"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="7dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="79dp"
             android:text="Expericence"
             android:textColor="#000000"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView51" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView52"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="139dp"
+            android:layout_marginTop="39dp"
             android:text="NLC India Limited, Neyveli"
             android:textColor="#000000"
-            app:layout_constraintStart_toEndOf="@+id/textView51"
-            app:layout_constraintTop_toBottomOf="@+id/textView50" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView51"
@@ -66,10 +89,12 @@
             android:id="@+id/textView50"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="123dp"
             android:text="Preview Expericence"
             android:textColor="#FF0000"
             android:textSize="20sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -80,26 +105,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="7dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="115dp"
             android:layout_marginBottom="16dp"
             android:text="Position"
             android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView53" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView56"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="81dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="139dp"
+            android:layout_marginTop="115dp"
             android:layout_marginBottom="16dp"
             android:text="DAT  / Apprentice Trainee"
             android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView55"
-            app:layout_constraintTop_toBottomOf="@+id/textView54" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -114,36 +139,40 @@
             android:id="@+id/textView44"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="54dp"
-            android:layout_marginTop="22dp"
+            android:layout_marginStart="138dp"
+            android:layout_marginTop="102dp"
+            android:layout_marginBottom="129dp"
             android:text="6 month "
             android:textColor="#000000"
-            app:layout_constraintStart_toEndOf="@+id/textView43"
-            app:layout_constraintTop_toBottomOf="@+id/textView42" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView43"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="7dp"
-            android:layout_marginTop="31dp"
+            android:layout_marginTop="102dp"
             android:layout_marginBottom="128dp"
             android:text="Expericence"
             android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView41" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView42"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="13dp"
+            android:layout_marginStart="138dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginBottom="170dp"
             android:text="Thundersoft India Pvt Ltd\nHyderabad"
             android:textColor="#000000"
-            app:layout_constraintStart_toEndOf="@+id/textView41"
-            app:layout_constraintTop_toBottomOf="@+id/textView40" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView41"
@@ -160,13 +189,16 @@
             android:id="@+id/textView40"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="124dp"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="123dp"
+            android:layout_marginBottom="219dp"
             android:text="Currently Working"
             android:textColor="#FF0000"
             android:textSize="20sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -175,43 +207,51 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="7dp"
-            android:layout_marginTop="31dp"
+            android:layout_marginTop="153dp"
+            android:layout_marginBottom="78dp"
             android:text="Position"
             android:textColor="#050505"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView43" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView46"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="79dp"
-            android:layout_marginTop="31dp"
+            android:layout_marginStart="138dp"
+            android:layout_marginTop="152dp"
+            android:layout_marginBottom="79dp"
             android:text="Software Trainee"
             android:textColor="#000000"
-            app:layout_constraintStart_toEndOf="@+id/textView45"
-            app:layout_constraintTop_toBottomOf="@+id/textView44" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView47"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="7dp"
-            android:layout_marginTop="31dp"
+            android:layout_marginTop="202dp"
+            android:layout_marginBottom="28dp"
             android:text="Cilent "
             android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView45" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView49"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="91dp"
-            android:layout_marginTop="31dp"
+            android:layout_marginStart="138dp"
+            android:layout_marginTop="202dp"
+            android:layout_marginBottom="28dp"
             android:text="Visteon Bangalore"
             android:textColor="#000000"
-            app:layout_constraintStart_toEndOf="@+id/textView47"
-            app:layout_constraintTop_toBottomOf="@+id/textView46" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

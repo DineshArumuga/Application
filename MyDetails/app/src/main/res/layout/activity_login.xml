@@ -10,38 +10,34 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="396dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
+        app:layout_constraintTop_toTopOf="parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="67dp"
             android:layout_height="63dp"
             android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
             android:src="@drawable/resume"
             app:civ_border_color="#FF000000"
             app:civ_border_width="2dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/resume"
             android:layout_width="185dp"
             android:layout_height="46dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="99dp"
-            android:layout_marginBottom="27dp"
+            android:layout_marginStart="127dp"
+            android:layout_marginTop="15dp"
             android:text="Resume"
             android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold"
             app:backgroundTint="#00FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -49,51 +45,45 @@
         android:id="@+id/constraintLayout8"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:layout_marginTop="53dp"
-        android:layout_marginBottom="390dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="268dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/companydetail"
-            android:layout_width="264dp"
-            android:layout_height="41dp"
-            android:layout_marginStart="38dp"
-            android:layout_marginEnd="33dp"
+            android:layout_width="258dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="114dp"
+            android:layout_marginTop="5dp"
             android:text="COMPANY DETAILS"
             android:textColor="#020202"
             android:textSize="20sp"
+            android:textStyle="bold"
             app:backgroundTint="#00FFFFFF"
-            app:layout_constraintBottom_toTopOf="@+id/textView23"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="65dp"
-            android:layout_marginEnd="84dp"
+            android:layout_marginStart="141dp"
+            android:layout_marginTop="51dp"
             android:text="Company Name,Experience,..."
-            android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/companydetail"
-            app:layout_constraintVertical_bias="0.5" />
+            android:textColor="#07F610"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <de.hdodenhof.circleimageview.CircleImageView
 
             android:layout_width="72dp"
             android:layout_height="69dp"
             android:layout_marginStart="4dp"
+            android:layout_marginTop="3dp"
             android:src="@drawable/company"
             app:civ_border_color="#FF000000"
             app:civ_border_width="2dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -112,104 +102,86 @@
             android:id="@+id/personaldetail"
             android:layout_width="265dp"
             android:layout_height="42dp"
-            android:layout_marginStart="26dp"
-            android:layout_marginEnd="36dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="4dp"
             android:text="Personal Details"
-            android:textColor="#040303"
+            android:textColor="#000000"
             android:textSize="20sp"
+            android:textStyle="bold"
             app:backgroundTint="#00FFFFFF"
             app:iconTint="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.121" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <de.hdodenhof.circleimageview.CircleImageView
 
             android:layout_width="77dp"
             android:layout_height="65dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="4dp"
             android:src="@drawable/personaldata"
             app:civ_border_color="#FF000000"
             app:civ_border_width="2dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/personaldetail"
-            app:layout_constraintHorizontal_bias="0.212"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.4" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="67dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginEnd="95dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginStart="146dp"
+            android:layout_marginTop="52dp"
             android:text="Name,Email id,Mobile No,..."
-            android:textColor="#050505"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/personaldetail" />
+            android:textColor="#03FF0D"
+            android:textColorHighlight="#04FA0E"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:layout_marginTop="53dp"
-        android:layout_marginBottom="518dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="141dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+        app:layout_constraintTop_toTopOf="parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="79dp"
             android:layout_height="69dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="3dp"
             android:src="@drawable/education"
             app:civ_border_color="#FF000000"
             app:civ_border_width="2dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/educationaldetail"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/educationaldetail"
-            android:layout_width="245dp"
+            android:layout_width="265dp"
             android:layout_height="40dp"
-            android:layout_marginStart="38dp"
-            android:layout_marginEnd="38dp"
+            android:layout_marginStart="125dp"
             android:text="EDUCATIONAL DETAILS"
             android:textColor="#0C0C0C"
-            android:textSize="16sp"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:backgroundTint="#00FFFFFF"
-            app:layout_constraintBottom_toTopOf="@+id/textView7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/profile_image"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="88dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="126dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginStart="175dp"
+            android:layout_marginTop="50dp"
             android:text="School,College,..."
-            android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/profile_image"
-            app:layout_constraintTop_toBottomOf="@+id/educationaldetail"
-            app:layout_constraintVertical_bias="0.5" />
+            android:textColor="#00FB0A"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
