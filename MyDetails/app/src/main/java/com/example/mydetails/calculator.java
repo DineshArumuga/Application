@@ -8,13 +8,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class calculator extends AppCompatActivity {
 
     Button btnAC,btnDEL,btnminus,btnplus,btndiv,btnequal,btnmul,btn9,btn8,btn7,btn6,btn5,btn4,btn3,btn2,btn1,btn0,btndot;
     private TextView textViewresult,textViewhistory;
-    String number = null,status = null;
+    String number = null,status = null,history,currentresult; //number - click 0 to 9 button stored //status - check the operation will performed
+    //history and currentresult - showing the top of the screen
     double firstnumber = 0,secondnumber = 0;
-    boolean operator = false;
+
+    boolean operator = false, dot = true, btnACcontol = true, btnequalControl = false;
+    //dot - checking dot btn is second time clicked or not
+    DecimalFormat myformatter = new DecimalFormat("######.######");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,6 +112,12 @@ public class calculator extends AppCompatActivity {
         btnmul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Value are showing the top of the screen
+                history = textViewhistory.getText().toString();
+                currentresult = textViewresult.getText().toString();
+                textViewhistory.setText(history+currentresult+"*");
+
+                //which operation have to performed 
                 if(operator)
                 {
                     if(status == "Addition")
@@ -125,7 +137,7 @@ public class calculator extends AppCompatActivity {
                     }
                 }
                 status = "Multiplication";
-                operator = true;
+                operator = false;
                 number = null;
 
             }
@@ -134,6 +146,9 @@ public class calculator extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                history = textViewhistory.getText().toString();
+                currentresult = textViewresult.getText().toString();
+                textViewhistory.setText(history+currentresult+"+");
                 if(operator)
                 {
                     if(status == "Multiplication")
@@ -153,7 +168,7 @@ public class calculator extends AppCompatActivity {
                     }
                 }
                 status = "Addition";
-                operator = true;
+                operator = false;
                 number = null;
             }
         });
@@ -161,6 +176,9 @@ public class calculator extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                history = textViewhistory.getText().toString();
+                currentresult = textViewresult.getText().toString();
+                textViewhistory.setText(history+currentresult+"/");
                 if(operator)
                 {
                     if(status == "Addition")
@@ -180,13 +198,17 @@ public class calculator extends AppCompatActivity {
                     }
                 }
                 status = "Divide";
-                operator = true;
+                operator = false;
                 number = null;
             }
         });
         btnminus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                history = textViewhistory.getText().toString();
+                currentresult = textViewresult.getText().toString();
+                textViewhistory.setText(history+currentresult+"-");
                 if(operator)
                 {
                     if(status == "Addition")
@@ -206,26 +228,90 @@ public class calculator extends AppCompatActivity {
                     }
                 }
                 status = "Subtraction";
-                operator = true;
+                operator = false;
                 number = null;
             }
         });
+        btnequal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(operator)
+                {
+                    if(status == "Addition")
+                    {
+                        plus();
+                    }
+                    else if (status == "Multiplication")
+                    {
+                        multiplication();
+                    }
+                    else if(status == "Divide")
+                    {
+                        divide();
+                    }
+                    else if(status == "Subtraction"){
+                        minus();
+                    }
+                    else {
+                        firstnumber = Double.parseDouble(textViewresult.getText().toString());
+                    }
+                }
+                operator = false;
+                btnequalControl = true;
+            }
+        });
+
         btnAC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                number = null;
+                status = null;
+                textViewresult.setText("0");
+                textViewhistory.setText("");
+                firstnumber = 0;
+                secondnumber = 0;
+                dot = true;
+                btnACcontol = true;
             }
         });
         btnDEL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(btnACcontol) //whenever you click the AC btn the result is showing 0
+                {
+                    textViewresult.setText("0");
+                }
+                else {
+                    number = number.substring(0, number.length() - 1);
+                    if(number.length() == 0){
+                        btnDEL.setClickable(false);
+                    }
+                    else if(number.contains("."))
+                    {
+                        dot = false;
+                    }
+                    else {
+                        dot = true;
+                    }
+                    textViewresult.setText(number);
+                }
             }
         });
         btndot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (dot) {
+                    if(number == null)
+                    {
+                        number = "0.";
+                    }
+                    else{
+                        number = number + ".";
+                    }
+                }
 
+                textViewresult.setText(number);
+                dot = false;
             }
         });
 
@@ -236,17 +322,28 @@ public class calculator extends AppCompatActivity {
         {
             number = view;
         }
+        else if(btnequalControl)
+        {
+            firstnumber = 0;
+            secondnumber = 0;
+            number = view;
+        }
         else
         {
             number = number + view;
         }
         textViewresult.setText(""+number);
+        operator = true;
+        btnACcontol = false;
+        btnDEL.setClickable(true);
+        btnequalControl = false;
     }
     public void plus()
     {
         secondnumber = Double.parseDouble(textViewresult.getText().toString()); //ParseDouble is converts String to Double
-        firstnumber = secondnumber + firstnumber;
-        textViewresult.setText(""+firstnumber);
+        firstnumber =  firstnumber + secondnumber;
+        textViewresult.setText(myformatter.format(firstnumber));
+        dot = true;
     }
     public void minus()
     {
@@ -256,9 +353,10 @@ public class calculator extends AppCompatActivity {
         }
         else {
             secondnumber = Double.parseDouble(textViewresult.getText().toString()); //ParseDouble is converts String to Double
-            firstnumber = secondnumber - firstnumber;
+            firstnumber = firstnumber - secondnumber ;
         }
-        textViewresult.setText(""+firstnumber);
+        textViewresult.setText(myformatter.format(firstnumber));
+        dot = true;
     }
     public void divide()
     {
@@ -270,21 +368,23 @@ public class calculator extends AppCompatActivity {
             secondnumber = Double.parseDouble(textViewresult.getText().toString()); //ParseDouble is converts String to Double
             firstnumber = firstnumber / secondnumber;
         }
-        textViewresult.setText(""+firstnumber);
+        textViewresult.setText(myformatter.format(firstnumber));
+        dot = true;
     }
     public void multiplication()
     {
         if(firstnumber == 0) {
             firstnumber = 1;
             secondnumber = Double.parseDouble(textViewresult.getText().toString()); //ParseDouble is converts String to Double
-            firstnumber = secondnumber * firstnumber;
+            firstnumber = firstnumber*secondnumber;
         }
         else
         {
             secondnumber = Double.parseDouble(textViewresult.getText().toString()); //ParseDouble is converts String to Double
-            firstnumber = secondnumber * firstnumber;
+            firstnumber = firstnumber*secondnumber;
         }
-        textViewresult.setText(""+firstnumber);
+        textViewresult.setText(myformatter.format(firstnumber));
+        dot = true;
     }
 
 }
