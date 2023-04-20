@@ -30,6 +30,14 @@ public class firstpage extends AppCompatActivity {
             }
         });
 
-
+        Button calculator;
+        calculator = findViewById(R.id.calculator);
+        calculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    Intent intent = new Intent(firstpage.this,calculator.class);
+                    startActivity(intent);
+            }
+        });
     }
 }
